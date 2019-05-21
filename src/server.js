@@ -132,6 +132,10 @@ controller.hears('joke', 'direct_message,direct_mention,mention', (bot, message)
   });
 });
 
+controller.on('direct_message', (bot, message) => {
+  bot.reply('I\'m sorry, I don\'t understand... Try asking for a joke or a food suggestion.');
+});
+
 
 // enable/disable cross origin resource sharing if necessary
 app.use(cors());
